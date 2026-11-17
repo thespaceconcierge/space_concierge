@@ -1,3 +1,17 @@
+/* Self-hosted fonts (latin subset, variable weight) */
+@font-face {
+  font-family: "Cormorant Garamond"; font-style: normal; font-weight: 300 700; font-display: swap;
+  src: url("../fonts/cormorant-garamond-latin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Cormorant Garamond"; font-style: italic; font-weight: 300 700; font-display: swap;
+  src: url("../fonts/cormorant-garamond-italic-latin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Jost"; font-style: normal; font-weight: 100 900; font-display: swap;
+  src: url("../fonts/jost-latin.woff2") format("woff2");
+}
+
 :root {
   --black: #0b0a09;
   --black-2: #141210;
@@ -142,12 +156,13 @@ p { margin: 0 0 1.1em; }
   position: relative; z-index: 1; flex: none;
   width: 100%; margin-top: clamp(-40px, -3vw, -16px);
   aspect-ratio: 1320 / 400; min-height: 240px;
-  background: url("../img/earth-horizon.jpg") center top / cover no-repeat;
+  background: url("../img/earth-horizon.webp") center top / cover no-repeat;
   -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 30%);
           mask-image: linear-gradient(to bottom, transparent 0%, #000 30%);
   pointer-events: none;
 }
 .hero__inner { position: relative; z-index: 2; width: 100%; max-width: 760px; padding: 0 16px; margin: auto 0 0; }
+.hero__title { margin: 0; font-size: inherit; line-height: 0; }
 .hero__logo { width: min(520px, 82vw); margin: 0 auto; }
 .hero__tagline {
   font-family: var(--serif); font-style: italic; font-size: clamp(1.4rem, 3vw, 2rem);
@@ -313,3 +328,7 @@ p { margin: 0 0 1.1em; }
 /* Bigger tap targets for inline links on touch screens */
 .link, .contact__email a, .footer__email a { display: inline-block; padding: 10px 0; }
 .about__text .link { padding-bottom: 6px; }
+
+@media (max-width: 700px) {
+  .hero__earth { background-image: url("../img/earth-horizon-660.webp"); }
+}

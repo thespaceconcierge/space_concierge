@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thespaceconcierge.github.io/space_concierge/sitemap.xml
