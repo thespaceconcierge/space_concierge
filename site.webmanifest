@@ -1,7 +1,7 @@
 {
   "name": "The Space Concierge",
   "short_name": "Space Concierge",
-  "description": "Private access. Extraordinary experiences.",
+  "description": "Commercial spaceflight, zero-g experiences and space industry advisory.",
   "start_url": "./",
   "display": "browser",
   "background_color": "#0b0a09",
