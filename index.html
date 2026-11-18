@@ -89,8 +89,22 @@
     ]
   }
   </script>
+  <!-- Google Tag Manager: loads after the page, so it does not slow the first view -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({"gtm.start": Date.now(), event: "gtm.js"});
+    window.addEventListener("load", function () {
+      setTimeout(function () {
+        var s = document.createElement("script");
+        s.async = true;
+        s.src = "https://www.googletagmanager.com/gtm.js?id=GTM-T4CJB7MJ";
+        document.head.appendChild(s);
+      }, 1500);
+    });
+  </script>
 </head>
 <body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4CJB7MJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <header class="nav" id="top">
     <a class="nav__brand" href="#home" aria-label="The Space Concierge home">

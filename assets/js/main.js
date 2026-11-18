@@ -45,5 +45,16 @@
     document.documentElement.classList.add("no-js");
   }
 
+  // Send lead clicks to Google Tag Manager (mailto and LinkedIn links)
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest("a[href]");
+    if (!a) return;
+    var href = a.getAttribute("href") || "";
+    var method = href.indexOf("mailto:") === 0 ? "email" : href.indexOf("linkedin.com") > -1 ? "linkedin" : "";
+    if (method) {
+      (window.dataLayer = window.dataLayer || []).push({ event: "generate_lead", method: method });
+    }
+  });
+
   document.getElementById("year").textContent = new Date().getFullYear();
 })();
